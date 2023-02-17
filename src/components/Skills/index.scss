@@ -1,0 +1,105 @@
+ .myChat label {
+     position: relative;
+     width: 100%;
+     height: 100%;
+     margin-bottom: 10px;
+     margin-top: 20px;
+     float: right;
+     background-color: #9e9d9db4;
+     text-align: right;
+     width: auto;
+     height: 40px;
+     clear: both;
+     border-style: hidden;
+     border-radius: 12px;
+     padding-left: 15px;
+     padding-right: 20px;
+     padding-top: 7px;
+ }
+
+ .myChat {
+     margin-bottom: 15px;
+     position: relative;
+ }
+
+ .yourChat {
+     margin-bottom: 16px;
+     position: relative;
+ }
+
+ .yourChat label {
+     position: relative;
+     width: 100%;
+     height: 100%;
+     margin-bottom: 10px;
+     background-color: #909fa7ae;
+     margin-top: 20px;
+     float: left;
+     text-align: left;
+     clear: both;
+     bottom: 10;
+     width: auto;
+     height: 40px;
+     border-style: solid;
+     border-style: hidden;
+     border-radius: 12px;
+     padding-left: 10px;
+     padding-right: 20px;
+     padding-top: 7px;
+ }
+
+ .submitButton {
+     background-color: rgba(185, 255, 127, 0.3803921569);
+     height: 29px;
+     text-align: center;
+     cursor: pointer;
+     box-shadow: 0 2px #999;
+     width: 73px;
+     margin-left: 66px;
+
+
+ }
+
+ .submitButton:hover {
+     background-color: #3e8e41
+ }
+
+ .button:click {
+     background-color: #3e8e41;
+     box-shadow: 0 0px #666;
+     transform: translateY(4px);
+ }
+
+ .textboxMessage {
+     width: 100%;
+     border: solid;
+     border-color: #909fa7ae;
+     padding-left: 15px;
+     margin-right: -140px;
+ }
+
+ .row-no-maring {
+     margin-left: 0 !important;
+     margin-right: 0 !important;
+ }
+
+ .row-no-padding {
+     padding-left: 0 !important;
+     padding-right: 0 !important;
+ }
+
+
+ .fixBottom {
+     position: fixed;
+     bottom: 0;
+     width: 100%;
+ }
+
+ .bottomZero {
+     position: absolute;
+     bottom: 0;
+     left: 0;
+     width: auto;
+     background: #232323;
+     text-align: center;
+ }
