@@ -26,9 +26,25 @@ const Skills = () => {
   ]);
 
   async function handleSubmit(e) {
-    setChatLog([...chatlog, { user: 'client', message: textboxMessage }]);
+    let chatLogNew = [...chatlog , { user:"me",message:textboxMessage}]
 
-    setTextboxMessage('');
+
+    setChatLog([...chatlog, { user: 'client', message: textboxMessage }]);
+    setTextboxMessage("");
+
+    const response = await fetch("http://localhost:3080",{
+      method:"POST",
+      headers:{
+        "Content-Type":"application/json"
+      },
+      body: JSON.stringify({
+        message:textboxMessage
+      })
+    })
+  const data = await response.json();
+
+  setChatLog([...chatLogNew, { user: 'bot', message:`${data.message}` }]);
+
   }
   return (
     <>
