@@ -15,6 +15,8 @@ const ChatMessage = ({ message }) => {
   )
 }
 
+
+
 const Skills = () => {
   const [textboxMessage, setTextboxMessage] = useState('');
   const [chatlog, setChatLog] = useState([
@@ -24,7 +26,11 @@ const Skills = () => {
       message: 'hi how can I help you today?'
     }
   ]);
-
+  const checkEnter=(event)=> {
+    if (event.keyCode === 13) {
+      handleSubmit();
+    }
+  }
   async function handleSubmit(e) {
     let chatLogNew = [...chatlog , { user:"me",message:textboxMessage}]
 
@@ -64,10 +70,10 @@ const Skills = () => {
           <div className="bottomZero">
             <div className='row'>
               <div className="col row-no-maring row-no-padding">
-                <input name='textboxMessage' value={textboxMessage} onChange={(e) => setTextboxMessage(e.target.value)} className="textboxMessage" placeholder="say somethings ...." />
+                <input name='textboxMessage' value={textboxMessage} onKeyDown={(e) => checkEnter(e) } onChange={(e) => setTextboxMessage(e.target.value)} className="textboxMessage" placeholder="say somethings ...." />
               </div>
               <div className="col-1 row-no-maring row-no-padding">
-                <div onClick={handleSubmit} className='submitButton'>send</div>
+                <div   onClick={handleSubmit} className='submitButton'>send</div>
               </div>
             </div>
           </div>
