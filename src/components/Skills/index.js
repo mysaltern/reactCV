@@ -38,7 +38,7 @@ const Skills = () => {
     setChatLog([...chatlog, { user: 'client', message: textboxMessage }]);
     setTextboxMessage("");
 
-    const response = await fetch("http://localhost:3080",{
+    const response = await fetch("http://54.144.45.251:3080",{
       method:"POST",
       headers:{
         "Content-Type":"application/json"
