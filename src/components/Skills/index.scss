@@ -56,7 +56,6 @@
      cursor: pointer;
      box-shadow: 0 2px #999;
      width: 73px;
-     margin-left: 66px;
 
 
  }
@@ -75,8 +74,10 @@
      width: 100%;
      border: solid;
      border-color: #909fa7ae;
-     padding-left: 15px;
-     margin-right: -140px;
+   margin-left: 70px;
+   position: relative;
+   height: 65px;
+
  }
 
  .row-no-maring {
@@ -103,4 +104,26 @@
      width: auto;
      background: #232323;
      text-align: center;
+ }
+
+ .rightStd
+ {
+   position: relative;
+ }
+
+
+ .buttonSend
+ {
+   margin-left: 71px;
+ }
+
+ .buttonSend , .col , .row
+ {
+   background-color: white;
+ }
+
+ .scrollStd
+ {
+   overflow-y:scroll;
+   height: 600px;
  }

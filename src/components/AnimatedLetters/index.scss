@@ -5,11 +5,11 @@
   animation-duration: 1s;
   animation-delay: 1s;
   animation-fill-mode: forwards;
-  min-width: 10px;
+  min-width: 8px;
 }
 
 .text-animate-hover {
-  min-width: 10px;
+  min-width: 8x;
   display: inline-block;
   animation-fill-mode: both;
 
@@ -23,4 +23,9 @@
   .text-animate._#{$i} {
     animation-delay: #{$i / 10}s;
   }
+}
+
+.sizeS
+{
+  font-size: 8px;
 }

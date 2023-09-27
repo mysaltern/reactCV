@@ -38,7 +38,7 @@ const Skills = () => {
     setChatLog([...chatlog, { user: 'client', message: textboxMessage }]);
     setTextboxMessage("");
 
-    const response = await fetch("http://54.144.45.251:3080",{
+    const response = await fetch("localhost:3080",{
       method:"POST",
       headers:{
         "Content-Type":"application/json"
@@ -55,25 +55,31 @@ const Skills = () => {
   return (
     <>
 
-      <div className='row'>
+      <div className='row parentStd'>
         <div className='col-12'>
           <br />
-          {
-            chatlog.map((message, index) =>
-              <ChatMessage key={index} message={message} />
-            )
-          }
+          <div className='scrollStd' >
+            {
+              chatlog.map((message, index) =>
+                  <ChatMessage key={index} message={message} />
+              )
+            }
+          </div>
+
 
         </div>
 
         <div className='row'>
           <div className="bottomZero">
             <div className='row'>
-              <div className="col row-no-maring row-no-padding">
+              <div className="col-8">
                 <input name='textboxMessage' value={textboxMessage} onKeyDown={(e) => checkEnter(e) } onChange={(e) => setTextboxMessage(e.target.value)} className="textboxMessage" placeholder="say somethings ...." />
               </div>
-              <div className="col-1 row-no-maring row-no-padding">
+              <br/>
+              <div className='row'>
+              <div className="buttonSend">
                 <div   onClick={handleSubmit} className='submitButton'>send</div>
+              </div>
               </div>
             </div>
           </div>

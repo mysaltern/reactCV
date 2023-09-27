@@ -40,18 +40,18 @@ const Contact = () => {
                 <div className='row' >
                   <div className='col-md-6'>
                     <label>Name</label>
-                    <input type="text" name="user_name" />
+                    <input className='left10Margin' type="text" name="user_name" />
 
 
                   </div>
                   <div className='col-md-6'>
                     <label>Email</label>
-                    <input type="email" name="user_email" />
+                    <input className='left10Margin' type="email" name="user_email" />
                   </div>
                 </div>
                 <br />
                 <label>Message</label>
-                <textarea rows="3" name="message" />
+                <textarea className='left10Margin' rows="3" name="message" />
                 <hr/>
                 <input type="submit"  className="btn btn-primary" value="Send" />
               </form>
@@ -60,7 +60,7 @@ const Contact = () => {
             <div className="col-md-3 text-center">
               <ul className="list-unstyled mb-0">
                 <li><i className="fas fa-map-marker-alt fa-2x"></i>
-                  <p>Christchurch, Canterbury, New Zealand</p>
+                  <p>Maribyrnong, Melbourne, Australia</p>
                 </li>
 
 

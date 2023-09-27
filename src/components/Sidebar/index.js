@@ -2,29 +2,17 @@ import './index.scss'
 import { Link, NavLink } from 'react-router-dom'
 import LogoS from '../../assets/images/logoSalt.png'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faHome, faUser, faEnvelope, faCogs } from '@fortawesome/free-solid-svg-icons'
+import { faHome, faUser,faCloudSun, faEnvelope, faCogs } from '@fortawesome/free-solid-svg-icons'
 import AnimatedLetters from '../AnimatedLetters/index'
 import { useEffect,useState } from 'react'
+
+
 const Sidebar = () => {
+    
     const [letterClass, setLetterClass] = useState('text-animate')
 
-    const nameArray = ['l', 'o', 'b', 'o', 'd', 'a', 'n']
-    const jobArray = [
-      'w',
-      'e',
-      'b',
-      ' ',
-      'd',
-      'e',
-      'v',
-      'e',
-      'l',
-      'o',
-      'p',
-      'e',
-      'r',
-      '.',
-    ]
+    const nameArray = ['M', 'o', 'h', 'a', 'm', 'm', 'a' ,'d']
+
   
     // useEffect(() => {
     //   return setTimeout(() => {
@@ -75,9 +63,19 @@ const Sidebar = () => {
                 >
                     <FontAwesomeIcon icon={faEnvelope} color="#4d4d4d" />
                 </NavLink>
+                <NavLink
+                    exact='true'
+                    className="weather-link"
+                    activeclassname="active"
+                    to="/weather"
+                >
+                    <FontAwesomeIcon icon={faCloudSun} color="#4d4d4d" /> 
+                </NavLink>
 
             </nav>
         </div>
     )
+    
 }
+
 export default Sidebar

@@ -101,7 +101,13 @@ nav {
         }
 
     }
+    a.weather-link {
+        &:after {
+            content: "Weather";
+            font-size: 4px;
+        }
 
+    }
     a.skills-link {
         &:after {
             content: "SKILLS";
